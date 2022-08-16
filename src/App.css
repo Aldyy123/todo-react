@@ -3,28 +3,34 @@ div.app{
 }
 .input-todo{
   margin: 0 auto;
-  background: salmon;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  background: #21E1E1;
+  padding: 10px;
+}
+.input-group{
+  margin: 0 auto!important;
 }
 input{
   padding: 10px;
   outline: none;
+  width: 90%;
+  box-sizing: border-box;
   border: none;
-  width: 20rem;
   border-radius: 10px;
+  margin: 0 auto!important;
+
 }
 input:focus{
   outline: none;
   border: none;
 }
 button{
+  cursor: pointer;
   border: none;
   padding: 10px 15px;
   margin: 5px;
   border-radius: 10px;
+  background-color: #3B9AE1;
+  color: aliceblue;
 }
 .not-allowed{
   cursor: not-allowed;
@@ -40,17 +46,10 @@ button{
 }
 select{
   padding: 10px;
-  width: 20rem;
+  margin: 0 auto!important;
 }
 select:focus{
   outline: none;
-}
-.input-group{
-  width: 28rem;
-}
-.filter{
-  background: sandybrown;
-  width: 20rem;
 }
 ol > div{
   display: grid;
@@ -64,10 +63,22 @@ li{
   margin: 10px;
   padding: 10px;
 }
+.todos-container::-webkit-scrollbar{
+  display: none!important;
+}
 div.todo{
-  background: rgb(101, 177, 177);
+  background: #3B9AE1;
   width: 100%;
+  min-width: 500px;
 }
-.disabled:disabled{
-  background: lawngreen;
+.todos-container{
+  overflow-x:scroll;
 }
+
+/* @media screen and (max-width: 576px){
+  .input-group{
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+} */

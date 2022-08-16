@@ -129,12 +129,14 @@ class App extends React.Component {
      <Filter sortingTodos={this.sortingTodos.bind(this)} />
     </div>
 
+    <div className="todos-container">
     <TodoItem
      todos={this.state.todos}
      DeleteTodo={this.deleteTodo.bind(this)}
      scribbleTodo={this.scribbleTodo.bind(this)}
      editTodo={this.editTodo.bind(this)}
     />
+    </div>
    </div>
   )
  }
