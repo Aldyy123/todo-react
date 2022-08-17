@@ -2,22 +2,25 @@ div.app{
   margin: 20px;
 }
 .input-todo{
-  margin: 0 auto;
   background: #21E1E1;
   padding: 10px;
 }
 .input-group{
-  margin: 0 auto!important;
+  display: flex;
+  justify-content: center;
+}
+.filter{
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
 }
 input{
   padding: 10px;
   outline: none;
-  width: 90%;
+  width: 300px;
   box-sizing: border-box;
   border: none;
   border-radius: 10px;
-  margin: 0 auto!important;
-
 }
 input:focus{
   outline: none;
@@ -34,6 +37,8 @@ button{
 }
 .not-allowed{
   cursor: not-allowed;
+  background-color: #919191!important;
+  opacity: 0.8;
 }
 .pointer{
   cursor: pointer;
@@ -46,6 +51,9 @@ button{
 }
 select{
   padding: 10px;
+  width: 300px;
+  outline: none;
+  border: none;
   margin: 0 auto!important;
 }
 select:focus{
@@ -75,10 +83,15 @@ div.todo{
   overflow-x:scroll;
 }
 
-/* @media screen and (max-width: 576px){
+@media screen and (max-width: 576px){
   .input-group{
     display: flex;    
     flex-direction: column;
-    justify-content: flex-start;
   }
-} */
+  input{
+    width: 100%;
+  }
+  .submit-todo{
+    width: 100px;
+  }
+}

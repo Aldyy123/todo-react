@@ -88,11 +88,11 @@ class App extends React.Component {
  }
 
  editTodo(todo) {
-  const editTodoText = prompt('Edit your Todo')
+  const editTodoText = prompt('Edit your Todo', todo.name)
   const filtered = this.state.todos.filter((item) => {
    if (item.id === todo.id) {
     item.name = editTodoText || item.name
-    item.status = 0
+    item.status = todo.status
    }
    return item
   })
@@ -122,7 +122,7 @@ class App extends React.Component {
        onKeyPress={this.handleKeyPressAddTodo.bind(this)}
       />
 
-      <button type='button' onClick={this.addTodos.bind(this)}>
+      <button type='button' className='submit-todo' onClick={this.addTodos.bind(this)}>
        Submit
       </button>
      </div>
