@@ -51,7 +51,8 @@ button{
 }
 select{
   padding: 10px;
-  width: 300px;
+  border-radius: 10px;
+  width: 380px;
   outline: none;
   border: none;
   margin: 0 auto!important;
@@ -89,6 +90,9 @@ div.todo{
     flex-direction: column;
   }
   input{
+    width: 100%;
+  }
+  select{
     width: 100%;
   }
   .submit-todo{
